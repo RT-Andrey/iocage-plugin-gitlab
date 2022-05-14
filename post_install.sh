@@ -37,7 +37,7 @@ psql -U postgres -d ${DB} -c "CREATE EXTENSION IF NOT EXISTS btree_gist;"
 
 # Fix permission for postgres 
 echo "listen_addresses = '*'" >> /var/db/postgres/data13/postgresql.conf
- echo "host  all  all 0.0.0.0/0 md5" >> /var/db/postgres/data13/pg_hba.conf
+echo "host  all  all 0.0.0.0/0 md5" >> /var/db/postgres/data13/pg_hba.conf
 
 # Restart postgresql after config change
 service postgresql restart
